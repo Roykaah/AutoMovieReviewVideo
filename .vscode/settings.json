@@ -1,0 +1,10 @@
+{
+    "python.testing.promptToConfigure": false,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "typescript.reportStyleChecksAsWarnings": false,
+    "outline.problems.colors": false,
+    "problems.decorations.enabled": false,
+    "outline.problems.enabled": false
+}
