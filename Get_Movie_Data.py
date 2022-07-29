@@ -4,6 +4,9 @@ from urllib.parse import quote
 import json
 import csv
 
+# ARQUIVO NAO É MAIS UTILIZADO!!!
+# MAS ESTOU DEIXANDO AQUI PARA CASO EU UTILIZE O TMDB NOVAMENTE
+
 
 def coletando_dados_do_ultimo_filme(api_key, session_id, headers):
     account_id = "account_id"

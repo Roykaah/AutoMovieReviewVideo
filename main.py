@@ -3,15 +3,14 @@ from moviepy.editor import *
 from moviepy.audio.fx.all import volumex
 from PIL import Image
 from AudioMaker import cria_salva_audio
-from Get_Movie_Data import dados_do_ultimo_filme_assistido
+from webscrappingLetterboxd import get_letterboxd_data
 from download_google_images import download_images
 import time
 from gambiarram_image_sequence import cria_video
 
 
 def make_robot_messages():
-    dados = dados_do_ultimo_filme_assistido()
-    dados['director'] = 'Park chan wook'
+    dados = get_letterboxd_data()
     frases = [
         f"Welcome, Today's review will be about, {dados['title']}",
         f"It's a {dados['year']} piece of art, Directed by {dados['director']}",
@@ -42,8 +41,8 @@ dados = make_robot_messages()
 #with open('MovieData.txt', 'w') as arq:
 #   arq.write(f"{dados['title']},{dados['year']},{dados['director']}")
 movie_query = f"{dados['title']} {dados['year']}"
-#download_images(movie_query, 37)
-#jdownload_images(dados['director'], 1)
+download_images(movie_query, 37)
+download_images(dados['director'], 1)
 time.sleep(1)
 
 welcome_audio_path = os.path.join(ROBOT_DIR, '0.mp3')
